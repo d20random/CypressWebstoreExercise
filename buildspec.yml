@@ -66,4 +66,4 @@ phases:
   build:
     commands:
       - npm run start:ci &
-      - npx cypress run --record
+      - npx cypress run --record --key 64df1d20-917e-42bd-b75f-e4e6d1ddb98c
