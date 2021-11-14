@@ -57,13 +57,13 @@ phases:
       - echo $CY_SPEC
       - echo $CY_CONFIG
       - yarn install --frozen-lockfile
-  pre_build:
+
+
+    pre_build:
     commands:
-    #  - yarn types #
-      - yarn lint
-      - yarn test:unit:ci
-      - yarn build:ci
+      - npm run cy:verify
+      - npm run cy:info
   build:
     commands:
-      - yarn start:ci & npx wait-on http://localhost:3000
-      - npx cypress run --record --parallel --browser $CY_BROWSER --ci-build-id $CODEBUILD_INITIATOR --group "$CY_GROUP" --spec "$CY_SPEC" --config "$CY_CONFIG"
+      - npm run start:ci &
+      - npx cypress run --record
