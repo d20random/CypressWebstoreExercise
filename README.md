@@ -29,6 +29,8 @@ Tests run in native Electron with full functionality.
 Chrome, Edge, Firefox also fully supported. (Firefox video recording functionality requires some additional packages)
 Preferred browser can be specified via --browser option.
 
+I am NOT using the browserstack extension because of simplicity and implicit trust that CI providers and local users are running the browsers and versions they are most comfortable with but this extension is supported and can easily be added in.
+
 ## CI integration
 Tests are already fully integrated to run and deposit artifacts in AWS CodeBuild (as default tool of Cypres.io Dashboard) so all recordings, results and artifacts can be reached via the dashboard.
 
